@@ -10,17 +10,18 @@ const Conversation = () => (
       avatar
     />
     <div className="conversation-description">
-      <div>
-        <div className="conversation-title">Semba Ahmed</div>
-        <div className="conversation-last_message">
-          There should be an sample
+      <div className="description-container">
+        <div>
+          <div className="conversation-title">Semba Ahmed</div>
+          <div className="conversation-last_message">
+            There should be an sample
+          </div>
+        </div>
+        <div className="conversation-time">
+          <div>6:43 PM</div>
+          <div className="conversation--unread">2</div>
         </div>
       </div>
-      <div className="conversation-time">
-        <div>6:43 PM</div>
-        <div className="conversation--unread">353</div>
-      </div>
-
     </div>
 
   </div>
