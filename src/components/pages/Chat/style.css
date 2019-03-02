@@ -1,10 +1,10 @@
 .chat-container{
-  background: #eee7dd;
+  background: url('https://i2.wp.com/textureshot.com/wp-content/uploads/2018/11/WhatsApp-original-chat-background-image-%C2%B7-GitHub.png?fit=557%2C1024&ssl=1') #eee7dd;
   height: 100vh;
   position: relative;
 }
 .chat-logs__container{
-  height: calc(100% - 70px);
+  height: calc(100% - 70px - 50px);
   overflow-y: scroll;
   scrollbar-color: rebeccapurple green;
   scrollbar-width: thin;

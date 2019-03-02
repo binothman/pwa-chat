@@ -15,12 +15,14 @@ jsemoji.img_sets.emojione.path = 'https://cdn.jsdelivr.net/emojione/assets/3.0/p
 const changeChatLogsHeight = () => {
   const elm = document.querySelector(".input-container")
   if (!elm) return
+  const headerHeight = document.querySelector('#chat-header').offsetHeight
   const height = elm.offsetHeight + 15
   document.querySelector(".chat-logs__container")
-  .style.height = `calc(100% - ${height}px)`
+  .style.height = `calc(100% - ${height}px - ${headerHeight}px)`
 }
 
-//window.onresize = changeChatLogsHeight()
+window.onresize = changeChatLogsHeight()
+window.onload = changeChatLogsHeight()
 class MessageSender extends React.Component{
   state = {
     inputText: '',
