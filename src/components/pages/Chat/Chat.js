@@ -6,7 +6,7 @@ const Chat = () => (
     <div className="chat-logs__container">
       <ChatLogs />
     </div>
-    <div style={{height: '20%'}}>
+    <div>
       <MessageSender />
     </div>
   </div>

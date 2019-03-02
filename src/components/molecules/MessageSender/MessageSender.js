@@ -12,13 +12,24 @@ jsemoji.img_set = 'emojione';
 // set the storage location for all emojis
 jsemoji.img_sets.emojione.path = 'https://cdn.jsdelivr.net/emojione/assets/3.0/png/32/';
 
+const changeChatLogsHeight = () => {
+  const elm = document.querySelector(".input-container")
+  if (!elm) return
+  const height = elm.offsetHeight + 15
+  document.querySelector(".chat-logs__container")
+  .style.height = `calc(100% - ${height}px)`
+}
+
+//window.onresize = changeChatLogsHeight()
 class MessageSender extends React.Component{
   state = {
     inputText: '',
-    active_emoji: false
+    active_emoji: false,
   }
+
   handleOnEmojiClick = (c, e) => {
     let emoji = jsemoji.replace_colons(`:${e.name}:`);
+    console.log('emoji', emoji)
     this.setState({
       inputText: this.state.inputText + emoji
     })
@@ -29,9 +40,11 @@ class MessageSender extends React.Component{
     this.setState({
       inputText: value
     })
+    changeChatLogsHeight()
   }
   render(){
     const { active_emoji, inputText } = this.state
+
     return (
       <div className="message-sender">
         {active_emoji &&

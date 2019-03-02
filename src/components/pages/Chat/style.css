@@ -4,6 +4,12 @@
   position: relative;
 }
 .chat-logs__container{
-  height: 80%;
+  height: calc(100% - 70px);
   overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+}
+.chat-logs__container::-webkit-scrollbar-track
+{
+	background-color: rgba(0,0,0,0);
 }

@@ -1,5 +1,6 @@
 .message-sender{
-  margin: 15px;
+  margin: 0 15px;
+  margin-top: 5px;
   position: relative;
 }
 .input-container{
