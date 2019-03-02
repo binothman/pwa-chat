@@ -1,0 +1,9 @@
+.chat-container{
+  background: #eee7dd;
+  height: 100vh;
+  position: relative;
+}
+.chat-logs__container{
+  height: 80%;
+  overflow-y: scroll;
+}

@@ -1,25 +1,28 @@
 import React from 'react'
-import { Image, Header } from 'semantic-ui-react'
+import PropTypes from 'prop-types'
+import { Image } from 'semantic-ui-react'
 
-const Conversation = () => (
+const Conversation = ({ avatar, title, last_message, time, unread }) => (
   <div className="conversation">
     <Image
-      src='https://www.streamlinedetailing.net/wp-content/uploads/2014/03/08_team.png'
-      className="conversation-avatar"
+      src={avatar}
+      className="conversation__avatar"
       verticalAlign="top"
       avatar
     />
-    <div className="conversation-description">
-      <div className="description-container">
+    <div className="conversation__wrapper">
+      <div className="conversation__container">
         <div>
-          <div className="conversation-title">Semba Ahmed</div>
-          <div className="conversation-last_message">
-            There should be an sample
-          </div>
+          <div className="conversation__title">{title}</div>
+          {last_message &&
+            <div className="conversation__last_message">
+              {last_message}
+            </div>
+          }
         </div>
-        <div className="conversation-time">
-          <div>6:43 PM</div>
-          <div className="conversation--unread">2</div>
+        <div className="conversation__time">
+          <div>{time}</div>
+          {unread && <div className="conversation__unread">{unread}</div>}
         </div>
       </div>
     </div>
@@ -27,4 +30,16 @@ const Conversation = () => (
   </div>
 )
 
+Conversation.propTypes = {
+  avatar: PropTypes.string,
+  title: PropTypes.string,
+  last_message: PropTypes.string,
+  time: PropTypes.string,
+}
+
+Conversation.defaultProps = {
+  avatar: 'https://www.sgbt.lu/uploads/tx_bisgbio/default-profile_01.png',
+  title: '....',
+  time: '00:00 AM'
+}
 export default Conversation

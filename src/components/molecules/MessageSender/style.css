@@ -1,0 +1,27 @@
+.message-sender{
+  margin: 15px;
+  position: relative;
+}
+.input-container{
+  background: #fff;
+  width: 100%;
+  padding: 15px 15px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+.input-text{
+  min-height:'38px';
+    resize:'none';
+    padding:'9px';
+    border: 0;
+    outline: 'none';
+    font-size:'15px';
+}
+.emoji-container{
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+}
+.emoji-container .emoji-picker{
+  width: 100%;
+}

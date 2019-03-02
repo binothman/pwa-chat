@@ -7,6 +7,7 @@ import RedirectRoute from './RedirectRoute'
 // Pages Components
 import Conversations from 'components/pages/Conversations'
 import Login from 'components/pages/Login'
+import Chat from 'components/pages/Chat'
 
 
 const RootRouter = ({ user }) => (
@@ -20,6 +21,12 @@ const RootRouter = ({ user }) => (
     <RedirectRoute
       path="/conversations"
       component={Conversations}
+      condition={!!user}
+      redirect="/login"
+    />
+    <RedirectRoute
+      path="/chat"
+      component={Chat}
       condition={!!user}
       redirect="/login"
     />
